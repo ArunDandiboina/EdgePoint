@@ -22,11 +22,11 @@ time.sleep(2)
 
 ed_driver.get("https://www.bing.com/?FORM=Z9FD1")
 
-for x in range(0, 10):
+for x in range(0, 91):
     word = "".join(random.choices(string.ascii_letters + " ", k=random.randint(0, 90)))
     search = ed_driver.find_element(By.ID, "sb_form_q")
     search.send_keys(Keys.CONTROL + "a")
-    time.sleep(1)
+    time.sleep(2)
     search.send_keys(word, Keys.ENTER)
     time.sleep(2)
     ed_driver.back()
